@@ -13,13 +13,10 @@ module.exports = {
 
     async execute(interaction) {
         const pokemonName = interaction.options.getString("pokemonname");
-        console.log(`Fetching data for Pokémon: ${pokemonName}`);
-
         try {
             var data = await fetch(
                 `https://pokeapi.co/api/v2/pokemon/${pokemonName}`
             );
-            console.log(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`);
             data = await data.json();
             await interaction.reply(`Nom du pokémon : ${data.forms[0].name}`);
         } catch (error) {
