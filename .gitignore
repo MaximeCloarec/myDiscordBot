@@ -1,4 +1,5 @@
 # Ignore the config.json file
 config.json
+Oldconfig.json
 # Ignore the node_modules directory
 node_modules/
