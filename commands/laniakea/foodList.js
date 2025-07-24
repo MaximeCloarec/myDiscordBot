@@ -17,7 +17,7 @@ module.exports = {
             const foodList = data
                 .map(
                     (food) =>
-                        `${food.foodName} (x${food.foodQuantity}) (id: ${food.id})`
+                        `${food.foodName} (x${food.foodQuantity}) (id: ${food.id}`
                 )
                 .join("\n");
             console.log("Fetched food list:", data);
